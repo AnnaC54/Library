@@ -1,9 +1,8 @@
 let myLibrary = [];
 let library = document.getElementById("libraryList");
 
-
-
 // book constructor
+
 function book(title, author, pages, status) {
     this.title = title;
     this.author = author;
@@ -11,17 +10,13 @@ function book(title, author, pages, status) {
     this.status = status;
 }
 
-
 //add new book to library
 
 function addBookToLibrary(newBook) {
     myLibrary.push(newBook);
 }
 
-
 document.getElementById("myAddButton").addEventListener("click", function () {
-
-    
 
     // onClick button, create new object and add it to array
     // ON CLICK EVENT LISTENER HINZUFÜGEN 
@@ -29,7 +24,9 @@ document.getElementById("myAddButton").addEventListener("click", function () {
     let newTitle = document.getElementById("validationCustom01").value;
     let newAuthor = document.getElementById("validationCustom02").value;
     let newPages = document.getElementById("validationCustom03").value;
-    let newStatus = "fix this";
+    let newStatus = document.getElementById("validationCustom04"); 
+    let newStatusText = newStatus.options[newStatus.selectedIndex].text;
+
 
     const newBookEntry = new book(newTitle, newAuthor, newPages, newStatus);
 
@@ -41,20 +38,22 @@ document.getElementById("myAddButton").addEventListener("click", function () {
     // loop through array  
 
     for (let i = 0; i < myLibrary.length; i++) {
-        newEntry.innerText = "Title: " + newTitle + " Author: " + newAuthor + " Pages: " + newPages + " " + newStatus;
+        newEntry.innerText = "Title: " + newTitle + " Author: " + newAuthor + " Pages: " + newPages + " " + newStatusText;
         library.appendChild(newEntry);
         }
 
 });
 
 
-// delete list on clicking button 
 
 const removeChilds = (library) => {
     while (library.lastChild) {
         library.removeChild(library.lastChild);
     }
 };
+
+
+// delete list on clicking button 
 
 document.getElementById("deleteButton").addEventListener("click", function () {
 removeChilds(library);

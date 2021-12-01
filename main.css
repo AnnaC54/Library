@@ -1,0 +1,46 @@
+.inner-body{
+    background-color: rgb(210, 245, 232);
+    width: 100vw; 
+    height: 100vh;
+    padding-top: 3em;
+    font-family: 'Chicle', cursive;
+    color: rgb(250, 190, 210);
+    background-image: url(/bg2.jpeg);
+    background-repeat: no-repeat; 
+    background-size: cover;
+
+}
+
+.form-control{
+    border:rgb(210, 245, 232, 0)
+}
+
+#myAddButton{
+    background-color:rgb(250, 190, 210);
+    color: #fff;
+}
+#myAddButton:hover{
+    background-color:#fff;
+    color: rgb(250, 190, 210);
+}
+
+ul{
+    margin: 0; 
+}
+
+p {
+    font-size: 1.5em;
+}
+
+.btn-light {
+    color: rgb(250, 190, 210);
+}
+
+.heading {
+    font-family: 'Chicle', cursive;
+    color: rgb(247, 88, 26);
+    font-size: 5em;
+    text-align: center;
+    text-shadow: -5px 5px rgb(250, 190, 210);
+
+}
